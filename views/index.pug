@@ -1,6 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p.lead Hello
+  .container
+    .row
+      .col-md-12
+        h1= title
+        p Welcome to #{title}
+        p.lead Hello
+    .row
+      .col-md-3.hello
+        | Hello
