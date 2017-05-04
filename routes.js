@@ -3,15 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express', path: req.url });
 });
 
-router.get('/hello', function(req, res, next) {
-  res.render('hello', { title: 'Hello', name: 'Peti' });
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Rólunk', path: req.url });
 });
 
-router.get('/a', function(req, res, next) {
-  res.render('index', { title: 'Hello', name: 'Peti' });
+router.get('/products', function(req, res, next) {
+  res.render('products', { title: 'Termékeink', path: req.url });
 });
 
 module.exports = router;
