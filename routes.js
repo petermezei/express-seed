@@ -1,6 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
+// Test for language detection.
+// router.get('*', function(req, res, next) {
+//   var isItHu = req.acceptsLanguages('hu');
+//   if(isItHu) {
+//     console.log('Hungarian');
+//   } else {
+//     console.log('Not Hungarian');
+//   }
+// });
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express', path: req.url });
